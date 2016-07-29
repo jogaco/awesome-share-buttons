@@ -23,23 +23,7 @@ module AwesomeShareButtons
     end
 
     def get_icon(name)
-      if name == "google_plus"
-        return "google-plus-square"
-      elsif name == "email"
-        return "envelope-square"
-      elsif name == "facebook"
-        return "facebook-square"
-      elsif name == "twitter"
-        return "twitter-square"
-      elsif name == "tumblr"
-        return "tumblr-square"
-      elsif name == "pinterest"
-        return "pinterest-square"
-      elsif name == "delicious"
-        return "delicious"
-      else
-        return name
-      end
+      (AwesomeShareButtons.config.site_to_icon || {})[name] || name
     end
 
   end
