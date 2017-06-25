@@ -1,6 +1,8 @@
 # -*- encoding: utf-8 -*-
-$:.push File.expand_path("../lib", __FILE__)
-require "./lib/awesome_share_buttons/version.rb"
+lib = File.expand_path('../lib/', __FILE__)
+$:.unshift lib unless $:.include?(lib)
+
+require "awesome_share_buttons/version.rb"
 
 Gem::Specification.new do |s|
   s.name        = "awesome-share-buttons"
